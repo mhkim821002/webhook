@@ -1,1 +1,565 @@
-test test2 test3
+
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="google-site-verification" content="JS_j0_S2cbtIuxh0gNcF2KHQmTlcEyovMcWOuI8ujuU" />
+<meta name="theme-color" content="#E6EDF2">
+<title>Mining Pool Hub I Home</title>
+<link rel="stylesheet" href="//miningpoolhub.com/site_assets/hub_ko/css/layout.css?20170916" type="text/css" media="screen" />
+<link rel="stylesheet" href="/site_assets/hub_ko/css/fontello.css">
+<!--[if IE 7]><link rel="stylesheet" href="/site_assets/hub_ko/css/fontello-ie7.css"><![endif]-->
+<link rel="stylesheet" href="//miningpoolhub.com/site_assets/hub_ko/css/visualize.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="//miningpoolhub.com/site_assets/hub_ko/css/jquery.jqplot.min.css" type="text/css" media="screen" />
+<!--[if lt IE 9]>
+	<link rel="stylesheet" href="//miningpoolhub.com/site_assets/hub_ko/css/ie.css" type="text/css" media="screen" />
+	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="//miningpoolhub.com/site_assets/hub_ko/js/hideshow.js" type="text/javascript"></script>
+<script type="text/javascript" src="//miningpoolhub.com/site_assets/hub_ko/js/jquery.visualize.js"></script>
+<script type="text/javascript" src="//miningpoolhub.com/site_assets/hub_ko/js/jquery.jqplot.min.js"></script>
+<script type="text/javascript" src="//miningpoolhub.com/site_assets/hub_ko/js/jquery.tablesorter.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="//miningpoolhub.com/site_assets/hub_ko/js/jquery.tablesorter.pager.js" type="text/javascript"></script>
+<script type="text/javascript" src="//miningpoolhub.com/site_assets/hub_ko/js/raphael.2.1.2.min.js"></script>
+<script type="text/javascript" src="//miningpoolhub.com/site_assets/hub_ko/js/justgage.1.0.1.min.js"></script>
+<script type="text/javascript" src="//miningpoolhub.com/site_assets/hub_ko/js/custom.js?20170722-2"></script>
+<script type="text/javascript" src="//miningpoolhub.com/site_assets/hub_ko/js/tinybox.js"></script>
+<script type="text/javascript" src="//miningpoolhub.com/site_assets/hub_ko/../global/js/number_format.js"></script>
+<!--[if IE]><script type="text/javascript" src="//miningpoolhub.com/site_assets/hub_ko/js/excanvas.js"></script><![endif]-->
+<script>
+    var zxcvbnPath = "//miningpoolhub.com/site_assets/hub_ko/js/zxcvbn/zxcvbn.js";
+  </script>
+<script type="text/javascript" src="//miningpoolhub.com/site_assets/hub_ko/js/pwcheck.js"></script>
+<link rel="canonical" href="https://miningpoolhub.com/" />
+</head>
+<body>
+<aside id="sidebar" class="column">
+<h1><a id="homeTitle" href="//miningpoolhub.com" title="Mining Pool Hub">Mining Pool Hub</a></h1>
+<ul>
+<li class="icon-off"><a href="/index.php?page=logout">로그아웃</a></li>
+<li class="icon-user"><a href="//miningpoolhub.com/?page=account&action=edit">정보 수정</a></li>
+<li class="icon-photo"><a href="//miningpoolhub.com/?page=account&action=balances">모든 잔고</a></li>
+<li class="icon-photo"><a href="//miningpoolhub.com/?page=account&action=autoexchange">자동 환전</a></li>
+<li class="icon-photo"><a href="//miningpoolhub.com/?page=account&action=hubworkers">허브 마이너</a></li>
+<li class="icon-align-left"><a href="//miningpoolhub.com/?page=statistics&action=autoswitches">자동 스위치</a></li>
+<li class="icon-desktop"><a href="//miningpoolhub.com/?page=gettingstarted">FAQ</a></li>
+</ul>
+<br />
+<br />
+<br />
+<h3>풀</h3>
+<ul>
+<li class="icon-align-left"><a href="//auroracoin-qubit.miningpoolhub.com">Auroracoin (Qubit)</a></li>
+<li class="icon-align-left"><a href="//bitcoin.miningpoolhub.com">Bitcoin</a></li>
+<li class="icon-align-left"><a href="//bitcoin-cash.miningpoolhub.com">Bitcoin-Cash</a></li>
+<li class="icon-align-left"><a href="//bitcoin-gold.miningpoolhub.com">Bitcoin-Gold</a></li>
+<li class="icon-align-left"><a href="//dash.miningpoolhub.com">Dash</a></li>
+<li class="icon-align-left"><a href="//digibyte-qubit.miningpoolhub.com">Digibyte (Qubit)</a></li>
+<li class="icon-align-left"><a href="//digibyte-skein.miningpoolhub.com">Digibyte (Skein)</a></li>
+<li class="icon-align-left"><a href="//ethereum.miningpoolhub.com">Ethereum</a></li>
+<li class="icon-align-left"><a href="//ethereum-classic.miningpoolhub.com">Ethereum-Classic</a></li>
+<li class="icon-align-left"><a href="//ethersocial.miningpoolhub.com">Ethersocial</a></li>
+<li class="icon-align-left"><a href="//expanse.miningpoolhub.com">Expanse</a></li>
+<li class="icon-align-left"><a href="//feathercoin.miningpoolhub.com">Feathercoin</a></li>
+<li class="icon-align-left"><a href="//globalboosty.miningpoolhub.com">Globalboosty</a></li>
+<li class="icon-align-left"><a href="//groestlcoin.miningpoolhub.com">Groestlcoin</a></li>
+<li class="icon-align-left"><a href="//litecoin.miningpoolhub.com">Litecoin</a></li>
+<li class="icon-align-left"><a href="//maxcoin.miningpoolhub.com">Maxcoin</a></li>
+<li class="icon-align-left"><a href="//monacoin.miningpoolhub.com">Monacoin</a></li>
+<li class="icon-align-left"><a href="//monero.miningpoolhub.com">Monero</a></li>
+<li class="icon-align-left"><a href="//myriadcoin-groestl.miningpoolhub.com">Myriadcoin (Groestl)</a></li>
+<li class="icon-align-left"><a href="//myriadcoin-yescrypt.miningpoolhub.com">Myriadcoin (Yescrypt)</a></li>
+<li class="icon-align-left"><a href="//ravencoin.miningpoolhub.com">Ravencoin</a></li>
+<li class="icon-align-left"><a href="//startcoin.miningpoolhub.com">Startcoin</a></li>
+<li class="icon-align-left"><a href="//vertcoin.miningpoolhub.com">Vertcoin</a></li>
+<li class="icon-align-left"><a href="//zcash.miningpoolhub.com">Zcash</a></li>
+<li class="icon-align-left"><a href="//zclassic.miningpoolhub.com">Zclassic</a></li>
+<li class="icon-align-left"><a href="//zcoin.miningpoolhub.com">Zcoin</a></li>
+<li class="icon-align-left"><a href="//zencash.miningpoolhub.com">Zencash</a></li>
+</ul>
+<br>
+<br>
+<br>
+<br>
+<ul id="langSelect" class="tabs">
+<li><a href="#" onclick="javascript:document.cookie='lang=en; expires=Monday, 18-May-2033 12:00:00 GMT; path=/; domain=.miningpoolhub.com';window.location.href=window.location.href">English</a></li>
+<li class="active"><a href="#" onclick="javascript:document.cookie='lang=ko; expires=Monday, 18-May-2033 12:00:00 GMT; path=/; domain=.miningpoolhub.com';window.location.href=window.location.href">한국어</a></li>
+</ul>
+</aside>
+<section id="main" class="column">
+<h4 class="notice">- 이더리움 출금 수수료 상한선을 지정할 수 있습니다. 이더리움 <a href="https://ethereum.miningpoolhub.com/index.php?page=account&action=pooledit">지갑 페이지 이동</a><br>- 마풀허 이더리움 풀은 MEV 보상을 함께 분배합니다. 이더리움 출금 수수료는 블록체인 네트워크 상태에 따라 지속적으로 바뀝니다.</h4> <h4 class="errormsg">2 번 로그인 실패 기록이 있습니다. <a href="?page=account&action=reset_failed">실패 횟수 초기화</a></h4>
+<article class="module width_62_percent">
+<header><h3>알고리즘별 자동 스위칭 포트입니다. <span class="green_message">NVIDIA GPU</span>를 기준으로 정렬되었습니다.</h3></header>
+<ul class="tabs">
+<li class><a href="//miningpoolhub.com/?page=home&normalize=amd">AMD</a></li>
+<li class="active"><a href="//miningpoolhub.com/?page=home&normalize=nvidia">NVIDIA</a></li>
+<li><a href="//miningpoolhub.com/?page=home&normalize=none">정규화하지 않음</a></li>
+</ul>
+<table id="algoList" class="tablesorter thintable" cellspacing="0">
+<thead>
+<tr>
+<th align="left" style="width:21%;">알고리즘</th>
+<th align="left" style="width:21%;">채굴 코인</th>
+<th align="left" style="width:12%;">포트</th>
+<th align="left" style="width:16%;" class="green_message"><span title="정규화된 예상 수익&#013;&#013;NVIDIA GPU를 기준으로 각 알고리즘의 속도를 측정한 후&#013;이 값을 기준으로 각 알고리즘별 채산성을 정규화시킨 값입니다.">정규화된 예상 수익</span></th>
+<th align="left" style="width:15%;">총 해시</th>
+<th align="left" style="width:15%;">코인 개수</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Ethash</td>
+<td align="left">Ethereum</td>
+<td align="right">17020</td>
+<td align="right"><span title="0.03557239&#013;BTC/GH/Day : 0.00101635">0.03557</span></td>
+<td align="right">23.47T</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td align="left">Etchash</td>
+<td align="left">Ethereum-Classic</td>
+<td align="right">17031</td>
+<td align="right"><span title="0.02251150&#013;BTC/GH/Day : 0.00064319">0.02251</span></td>
+<td align="right">916.42G</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td align="left">Kawpow</td>
+<td align="left">Ravencoin</td>
+<td align="right">17030</td>
+<td align="right"><span title="0.02143901&#013;BTC/GH/Day : 0.00126858">0.02144</span></td>
+<td align="right">428.04G</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td align="left">Equihash-BTG</td>
+<td align="left">Bitcoin-Gold</td>
+<td align="right">17026</td>
+<td align="right"><span title="0.01452416&#013;BTC/GH/Day : 264.07566197">0.01452</span></td>
+<td align="right">924.61K</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td align="left">Verthash</td>
+<td align="left">Vertcoin</td>
+<td align="right">17032</td>
+<td align="right"><span title="0.00905399&#013;BTC/GH/Day : 0.02166027">0.00905</span></td>
+<td align="right">894.61M</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td align="left">NeoScrypt</td>
+<td align="left">Feathercoin</td>
+<td align="right">17012</td>
+<td align="right"><span title="0.00685367&#013;BTC/GH/Day : 0.00481636">0.00685</span></td>
+<td align="right">26.44M</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td align="left">Cryptonight-Monero</td>
+<td align="left">Monero</td>
+<td align="right">17024</td>
+<td align="right"><span title="0.00045157&#013;BTC/GH/Day : 0.64234922">0.00045</span></td>
+<td align="right">10.74M</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td align="left">Equihash</td>
+<td align="left">Zencash</td>
+<td align="right">17023</td>
+<td align="right"><span title="0.00040121&#013;BTC/GH/Day : 0.58571001">0.00040</span></td>
+<td align="right">1.28M</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td align="left">Yescrypt</td>
+<td align="left">Myriadcoin-Yescrypt</td>
+<td align="right">17021</td>
+<td align="right"><span title="0.00022408&#013;BTC/GH/Day : 0.13442226">0.00022</span></td>
+<td align="right">9.52M</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td align="left">Groestl</td>
+<td align="left">Groestlcoin</td>
+<td align="right">17004</td>
+<td align="right"><span title="0.00017048&#013;BTC/GH/Day : 0.00000278">0.00017</span></td>
+<td align="right">3.50T</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td align="left">Skein</td>
+<td align="left">Digibyte-Skein</td>
+<td align="right">17016</td>
+<td align="right"><span title="0.00016787&#013;BTC/GH/Day : 0.00000028">0.00017</span></td>
+<td align="right">99.51G</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td align="left">Qubit</td>
+<td align="left">Digibyte-Qubit</td>
+<td align="right">17014</td>
+<td align="right"><span title="0.00005628&#013;BTC/GH/Day : 0.00000186">0.00006</span></td>
+<td align="right">4.26T</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td align="left">Lyra2RE2</td>
+<td align="left">Monacoin</td>
+<td align="right">17018</td>
+<td align="right"><span title="0.00004877&#013;BTC/GH/Day : 0.00000101">0.00005</span></td>
+<td align="right">519.21G</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td align="left">Scrypt</td>
+<td align="left">Litecoin</td>
+<td align="right">17001</td>
+<td align="right"><span title="0.00004540&#013;BTC/GH/Day : 0.00005073">0.00005</span></td>
+<td align="right">3.38G</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td align="left">X11</td>
+<td align="left">Dash</td>
+<td align="right">17007</td>
+<td align="right"><span title="0.00001861&#013;BTC/GH/Day : 0.00000089">0.00002</span></td>
+<td align="right">1.46T</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td align="left">Myriad-Groestl</td>
+<td align="left">Myriadcoin-Groestl</td>
+<td align="right">17005</td>
+<td align="right"><span title="0.00001615&#013;BTC/GH/Day : 0.00000014">0.00002</span></td>
+<td align="right">138.63G</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td align="left">Equihash-ZCL</td>
+<td align="left">Zclassic</td>
+<td align="right">17029</td>
+<td align="right">-</td>
+<td align="right">14.66K</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td align="left">Keccak</td>
+<td align="left">Maxcoin</td>
+<td align="right">17003</td>
+<td align="right">-</td>
+<td align="right">458.13M</td>
+<td align="right">1</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article class="module width_38_percent_right">
+<header><h3>간단한 채굴 방법</h3></header>
+<ol>
+<li><a href="//miningpoolhub.com/index.php?page=register">회원 가입</a>을 하세요</li>
+<li><a href="//miningpoolhub.com/index.php?page=account&action=autoexchange">자동 환전</a> 페이지에서 최종적으로 받고 싶은 코인을 선택하세요. (선택사항)</li>
+<li>채굴을 시작하세요
+<ul>
+<li>단순 코인 채굴 (포트 <span class="green_message">20XXX</span>)<br />왼쪽 아래 표에서 원하는 코인 옆에 쓰여있는 포트 번호를 확인하세요. 알맞은 마이너를 이용해서 해당 포트로 바로 채굴하시면 됩니다.</li>
+<li>알고리즘 스위치 채굴 (포트 <span class="green_message">17XXX</span>)<br />마이닝 풀 허브에서는 각 알고리즘별로 스위치할 수 있는 포트를 제공합니다. 이 포트들은 자동으로 그 때 그 때 가장 수익률 높은 코인을 채굴합니다. 해시를 렌탈하거나 ASIC, FPGA를 이용하는 마이너에게 추천합니다.</li>
+<li>멀티 알고리즘 스위치 채굴 (포트 <span class="green_message">12XXX</span>)<br /><a href="//miningpoolhub.com/index.php?page=gettingstarted">허브</a> 기능을 이용해 여러 알고리즘의 코인들도 스위치하면서 채굴할 수 있습니다. GPU 채굴자들에게 좋지만 설정 방법이나 최적화 방법이 비교적 어렵습니다.</li>
+</ul>
+</li>
+<li>채굴 최적화에 더 알아보세요.<br /><a href="https://bitcointalk.org/index.php?topic=472510.msg10596890#msg10596890" target="_blank">초기 difficulty를 지정하는 법 (영어)</a></li>
+</ol>
+<ul><li>풀 수수료는 0.9% 입니다. 다른 어떤 풀보다도 낮습니다.</li></ul>
+</article>
+<article class="module width_62_percent clear">
+<header><h3>코인 채굴 현황과 수익표입니다. <span class="green_message">NVIDIA GPU</span>를 기준으로 정렬되었습니다.</h3></header>
+<ul class="tabs">
+<li class><a href="//miningpoolhub.com/?page=home&normalize=amd">AMD</a></li>
+<li class="active"><a href="//miningpoolhub.com/?page=home&normalize=nvidia">NVIDIA</a></li>
+<li><a href="//miningpoolhub.com/?page=home&normalize=none">정규화하지 않음</a></li>
+</ul>
+<table id="coinList" class="tablesorter thintable" cellspacing="0">
+<thead>
+<tr>
+<th align="left" style="width:21%;">코인</th>
+<th align="left" style="width:21%;">알고리즘</th>
+<th align="left" style="width:12%;">포트</th>
+<th align="left" style="width:16%;" class="green_message"><span title="정규화된 예상 수익&#013;&#013;NVIDIA GPU를 기준으로 각 알고리즘의 속도를 측정한 후&#013;이 값을 기준으로 각 알고리즘별 채산성을 정규화시킨 값입니다.">정규화된 예상 수익</span></th>
+<th align="left" style="width:15%;">풀 해시</th>
+<th align="left" style="width:15%;">마지막 블럭</th>
+</tr>
+</thead>
+<tbody>
+<tr class="selected_row">
+<td align="left"><a href="//ethereum.miningpoolhub.com" target="_blank">Ethereum</a></td>
+<td align="left">Ethash</td>
+<td align="right">20535</td>
+<td align="right"><span title="0.03557239&#013;BTC/GH/Day : 0.00101635">0.03557</span></td>
+<td align="right"><span title="Pool Hash : 23.46T&#013; Net Hash : 911.22T">23.46T</span></td>
+<td align="right">1분 전</td>
+</tr>
+<tr class="selected_row">
+<td align="left"><a href="//ethereum-classic.miningpoolhub.com" target="_blank">Ethereum-Classic</a></td>
+<td align="left">Etchash</td>
+<td align="right">20615</td>
+<td align="right"><span title="0.02251150&#013;BTC/GH/Day : 0.00064319">0.02251</span></td>
+<td align="right"><span title="Pool Hash : 916.42G&#013; Net Hash : 23.40T">916.42G</span></td>
+<td align="right">1분 전</td>
+</tr>
+<tr class="selected_row">
+<td align="left"><a href="//ravencoin.miningpoolhub.com" target="_blank">Ravencoin</a></td>
+<td align="left">Kawpow</td>
+<td align="right">20611</td>
+<td align="right"><span title="0.02143901&#013;BTC/GH/Day : 0.00126858">0.02144</span></td>
+<td align="right"><span title="Pool Hash : 428.04G&#013; Net Hash : 4.56T">428.04G</span></td>
+<td align="right">3분 전</td>
+</tr>
+<tr class="selected_row">
+<td align="left"><a href="//bitcoin-gold.miningpoolhub.com" target="_blank">Bitcoin-Gold</a></td>
+<td align="left">Equihash-BTG</td>
+<td align="right">20595</td>
+<td align="right"><span title="0.01452416&#013;BTC/GH/Day : 264.07566197">0.01452</span></td>
+<td align="right"><span title="Pool Hash : 924.61K&#013; Net Hash : 2.34M">924.61K</span></td>
+<td align="right">21분 전</td>
+</tr>
+<tr>
+<td align="left"><a href="//expanse.miningpoolhub.com" target="_blank">Expanse</a></td>
+<td align="left">Ethash</td>
+<td align="right">20565</td>
+<td align="right"><span title="0.00947270&#013;BTC/GH/Day : 0.00027065">0.00947</span></td>
+<td align="right"><span title="Pool Hash : 8.51G&#013; Net Hash : 30.62G">8.51G</span></td>
+<td align="right">1분 전</td>
+</tr>
+<tr class="selected_row">
+<td align="left"><a href="//vertcoin.miningpoolhub.com" target="_blank">Vertcoin</a></td>
+<td align="left">Verthash</td>
+<td align="right">20534</td>
+<td align="right"><span title="0.00905399&#013;BTC/GH/Day : 0.02166027">0.00905</span></td>
+<td align="right"><span title="Pool Hash : 894.61M&#013; Net Hash : 2.21G">894.61M</span></td>
+<td align="right">9분 전</td>
+</tr>
+<tr class="selected_row">
+<td align="left"><a href="//feathercoin.miningpoolhub.com" target="_blank">Feathercoin</a></td>
+<td align="left">NeoScrypt</td>
+<td align="right">20510</td>
+<td align="right"><span title="0.00685367&#013;BTC/GH/Day : 0.00481636">0.00685</span></td>
+<td align="right"><span title="Pool Hash : 26.44M&#013; Net Hash : 1.04G">26.44M</span></td>
+<td align="right">1분 전</td>
+</tr>
+<tr>
+<td align="left"><a href="//ethersocial.miningpoolhub.com" target="_blank">Ethersocial</a></td>
+<td align="left">Ethash</td>
+<td align="right">20605</td>
+<td align="right"><span title="0.00272403&#013;BTC/GH/Day : 0.00007783">0.00272</span></td>
+<td align="right"><span title="Pool Hash : -&#013; Net Hash : 5.05G">-</span></td>
+<td align="right">7시간 전</td>
+</tr>
+<tr class="selected_row">
+<td align="left"><a href="//monero.miningpoolhub.com" target="_blank">Monero</a></td>
+<td align="left">Cryptonight-Monero</td>
+<td align="right">20580</td>
+<td align="right"><span title="0.00045157&#013;BTC/GH/Day : 0.64234922">0.00045</span></td>
+<td align="right"><span title="Pool Hash : 10.74M&#013; Net Hash : 3.14G">10.74M</span></td>
+<td align="right">12시간 전</td>
+</tr>
+<tr class="selected_row">
+<td align="left"><a href="//zencash.miningpoolhub.com" target="_blank">Zencash</a></td>
+<td align="left">Equihash</td>
+<td align="right">20594</td>
+<td align="right"><span title="0.00040121&#013;BTC/GH/Day : 0.58571001">0.00040</span></td>
+<td align="right"><span title="Pool Hash : 1.28M&#013; Net Hash : 2.27G">1.28M</span></td>
+<td align="right">10주 전</td>
+</tr>
+<tr class="selected_row">
+<td align="left"><a href="//myriadcoin-yescrypt.miningpoolhub.com" target="_blank">Myriadcoin-Yescrypt</a></td>
+<td align="left">Yescrypt</td>
+<td align="right">20577</td>
+<td align="right"><span title="0.00022408&#013;BTC/GH/Day : 0.13442226">0.00022</span></td>
+<td align="right"><span title="Pool Hash : 734.97K&#013; Net Hash : 115.67T">734.97K</span></td>
+<td align="right">1분 전</td>
+</tr>
+<tr class="selected_row">
+<td align="left"><a href="//groestlcoin.miningpoolhub.com" target="_blank">Groestlcoin</a></td>
+<td align="left">Groestl</td>
+<td align="right">20486</td>
+<td align="right"><span title="0.00017048&#013;BTC/GH/Day : 0.00000278">0.00017</span></td>
+<td align="right"><span title="Pool Hash : 3.50T&#013; Net Hash : 40.03T">3.50T</span></td>
+<td align="right">51분 전</td>
+</tr>
+<tr class="selected_row">
+<td align="left"><a href="//digibyte-skein.miningpoolhub.com" target="_blank">Digibyte-Skein</a></td>
+<td align="left">Skein</td>
+<td align="right">20527</td>
+<td align="right"><span title="0.00016787&#013;BTC/GH/Day : 0.00000028">0.00017</span></td>
+<td align="right"><span title="Pool Hash : 99.51G&#013; Net Hash : -">99.51G</span></td>
+<td align="right">6일 전</td>
+</tr>
+<tr class="selected_row">
+<td align="left"><a href="//digibyte-qubit.miningpoolhub.com" target="_blank">Digibyte-Qubit</a></td>
+<td align="left">Qubit</td>
+<td align="right">20517</td>
+<td align="right"><span title="0.00005628&#013;BTC/GH/Day : 0.00000186">0.00006</span></td>
+<td align="right"><span title="Pool Hash : 4.13T&#013; Net Hash : -">4.13T</span></td>
+<td align="right">24분 전</td>
+</tr>
+<tr class="selected_row">
+<td align="left"><a href="//monacoin.miningpoolhub.com" target="_blank">Monacoin</a></td>
+<td align="left">Lyra2RE2</td>
+<td align="right">20593</td>
+<td align="right"><span title="0.00004877&#013;BTC/GH/Day : 0.00000101">0.00005</span></td>
+<td align="right"><span title="Pool Hash : 519.21G&#013; Net Hash : 252.56T">519.21G</span></td>
+<td align="right">9시간 전</td>
+</tr>
+<tr class="selected_row">
+<td align="left"><a href="//litecoin.miningpoolhub.com" target="_blank">Litecoin</a></td>
+<td align="left">Scrypt</td>
+<td align="right">20460</td>
+<td align="right"><span title="0.00004540&#013;BTC/GH/Day : 0.00005073">0.00005</span></td>
+<td align="right"><span title="Pool Hash : 3.38G&#013; Net Hash : 403.15T">3.38G</span></td>
+<td align="right">1주 전</td>
+</tr>
+<tr class="selected_row">
+<td align="left"><a href="//dash.miningpoolhub.com" target="_blank">Dash</a></td>
+<td align="left">X11</td>
+<td align="right">20465</td>
+<td align="right"><span title="0.00001861&#013;BTC/GH/Day : 0.00000089">0.00002</span></td>
+<td align="right"><span title="Pool Hash : 1.46T&#013; Net Hash : 4.38P">1.46T</span></td>
+<td align="right">1일 전</td>
+</tr>
+<tr class="selected_row">
+<td align="left"><a href="//myriadcoin-groestl.miningpoolhub.com" target="_blank">Myriadcoin-Groestl</a></td>
+<td align="left">Myriad-Groestl</td>
+<td align="right">20479</td>
+<td align="right"><span title="0.00001615&#013;BTC/GH/Day : 0.00000014">0.00002</span></td>
+<td align="right"><span title="Pool Hash : 138.63G&#013; Net Hash : 115.67T">138.63G</span></td>
+<td align="right">2시간 전</td>
+</tr>
+<tr class="selected_row">
+<td align="left"><a href="//maxcoin.miningpoolhub.com" target="_blank">Maxcoin</a></td>
+<td align="left">Keccak</td>
+<td align="right">20461</td>
+<td align="right">-</td>
+<td align="right"><span title="Pool Hash : 458.13M&#013; Net Hash : 2.15T">458.13M</span></td>
+<td align="right">11시간 전</td>
+</tr>
+<tr>
+<td align="left"><a href="//bitcoin.miningpoolhub.com" target="_blank">Bitcoin</a></td>
+<td align="left">SHA256</td>
+<td align="right">20491</td>
+<td align="right">-</td>
+<td align="right"><span title="Pool Hash : -&#013; Net Hash : 192324.60P">-</span></td>
+<td align="right">-</td>
+</tr>
+<tr>
+<td align="left"><a href="//auroracoin-qubit.miningpoolhub.com" target="_blank">Auroracoin-Qubit</a></td>
+<td align="left">Qubit</td>
+<td align="right">20592</td>
+<td align="right">-</td>
+<td align="right"><span title="Pool Hash : 123.82G&#013; Net Hash : -">123.82G</span></td>
+<td align="right">6분 전</td>
+</tr>
+<tr>
+<td align="left"><a href="//bitcoin-cash.miningpoolhub.com" target="_blank">Bitcoin-Cash</a></td>
+<td align="left">SHA256</td>
+<td align="right">20591</td>
+<td align="right">-</td>
+<td align="right"><span title="Pool Hash : -&#013; Net Hash : 1397.87P">-</span></td>
+<td align="right">-</td>
+</tr>
+<tr>
+<td align="left"><a href="//zcoin.miningpoolhub.com" target="_blank">Zcoin</a></td>
+<td align="left">Lyra2z</td>
+<td align="right">20581</td>
+<td align="right">-</td>
+<td align="right"><span title="Pool Hash : -&#013; Net Hash : 117.93G">-</span></td>
+<td align="right">165주 전</td>
+</tr>
+<tr class="selected_row">
+<td align="left"><a href="//zclassic.miningpoolhub.com" target="_blank">Zclassic</a></td>
+<td align="left">Equihash-ZCL</td>
+<td align="right">20574</td>
+<td align="right">-</td>
+<td align="right"><span title="Pool Hash : 14.66K&#013; Net Hash : 14.66K">14.66K</span></td>
+<td align="right">12초 전</td>
+</tr>
+<tr>
+<td align="left"><a href="//zcash.miningpoolhub.com" target="_blank">Zcash</a></td>
+<td align="left">Equihash</td>
+<td align="right">20570</td>
+<td align="right">-</td>
+<td align="right"><span title="Pool Hash : -&#013; Net Hash : 8.45G">-</span></td>
+<td align="right">64주 전</td>
+</tr>
+<tr>
+<td align="left"><a href="//globalboosty.miningpoolhub.com" target="_blank">Globalboosty</a></td>
+<td align="left">Yescrypt</td>
+<td align="right">20543</td>
+<td align="right">-</td>
+<td align="right"><span title="Pool Hash : 8.78M&#013; Net Hash : 12.57M">8.78M</span></td>
+<td align="right">24분 전</td>
+</tr>
+<tr>
+<td align="left"><a href="//startcoin.miningpoolhub.com" target="_blank">Startcoin</a></td>
+<td align="left">X11</td>
+<td align="right">20509</td>
+<td align="right">-</td>
+<td align="right"><span title="Pool Hash : -&#013; Net Hash : 23.86G">-</span></td>
+<td align="right">5일 전</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article class="module width_38_percent_right">
+<header><h3>커뮤니티</h3></header>
+커뮤니티에 풀 채굴과 마이닝풀허브 사용법에 대해 질문할 수 있습니다. 바로 위의 "간단한 채굴 방법"란과 <a href="https://miningpoolhub.com/?page=gettingstarted">FAQ</a>를 먼저 읽어보세요.
+<ul>
+<li class="icon-bell"><a href="https://twitter.com/MiningPoolHub" target="_blank">Twitter @MiningPoolHub</a></li>
+<li class="icon-user"><a href="https://bitcointalk.org/index.php?topic=472510.0" target="_blank">Bitcointalk</a></li>
+<li class="icon-user"><a href="https://www.reddit.com/r/MiningPoolHub" target="_blank">Reddit</a></li>
+</ul>
+</article>
+<article class="module width_38_percent_right">
+<header><h3>연락</h3></header>
+운영팀의 공식 답변을 받기 원하신다면 아래 메일로 문의해 주세요. 모든 메일에 답변을 드립니다.
+<ul>
+<li class="icon-user">이메일: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fd9e9293899c9e89bd90949394939a8d92929195889fd39e9290">[email&#160;protected]</a></li>
+</ul>
+</article>
+<article class="module width_full clear">
+<a href="https://www.nicehash.com/?refby=8baba488-6679-4cfa-925b-fe10802c584a" target="_blank"><img src="//miningpoolhub.com/site_assets/hub/images/nicehash_banner.gif"></a>
+</article>
+<div class="spacer"></div>
+</section>
+<footer class="footer">
+<p>서버 시각 : February 12, 2022, 05:27:27 UTC</p>
+<p><strong>MPOS</strong> by TheSerapher, available on <a href="https://github.com/MPOS/php-mpos">GitHub</a></p>
+<p><strong>Copyright &copy; Sebastian Grewe</strong>, Theme by <a href="http://www.medialoot.com">MediaLoot</a></p>
+<p>New Mining Corp., Revolution Avenue, Victoria, Mahe, Seychelle</p>
+<p><a href="https://miningpoolhub.com/index.php?page=tac">이용약관</a></p>
+<p></p>
+<p>&nbsp;</p>
+</footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48579870-1', 'miningpoolhub.com');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+<form style="display:none;" method="get" name="redirect"></form>
+<script type="text/javascript">
+if (window.location.protocol != 'https:') {
+    $ (document.createElement('img'))
+        .hide()
+        .attr({ src : 'https://' + window.location.hostname + '/favicon.ico' })
+        .load(function() {
+            window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+        })
+        .appendTo(document.body);
+}
+</script>
+</html>
